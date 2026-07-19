@@ -16,6 +16,14 @@ class Dense():
     return self.output    
   #Backworpass
   def backworpass(self, dl_da ):
+
+    '''
+    dl_dw == loss with respect weight
+    dl_db == loss with respect bias
+    dl_di == loss with respect input 
+    dl_da = gradient from next layer
+    
+    '''
     
     #gradient with respect to weight --> dl/dw
     self.dl_dw = self.input.T @ dl_da # y=mx+b --> y'= x
