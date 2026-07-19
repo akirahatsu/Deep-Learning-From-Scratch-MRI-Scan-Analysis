@@ -18,6 +18,7 @@ dL/db = Σδ
 dL/dX = δWᵀ
 
 
-Weights are initialized with **He initialization** (\(\sqrt{2/n_{in}}\)) for stable training with ReLU activations.
+Weights are initialized with **He initialization** np.sqrt(2 / n_input) for stable training with ReLU activations.
 
-<img src="arcitecture_stuff/dense.jpg" alt="Dense Layer" width="700">
+<img src="arcitecture_stuff/dense.jpg" width="700">
+<img src="arcitecture_stuff/dense.jpg" width="700">
