@@ -22,7 +22,7 @@ Weights are initialized with **He initialization** np.sqrt(2 / n_input) for stab
 
 <img src="dense.jpg" width="700">
 
-CATEGORICAL CROSS ENTROPY
+## CATEGORICAL CROSS ENTROPY
 
 if ndim == 2 --> one hot encoded 
 
