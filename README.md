@@ -10,10 +10,14 @@ Z = XW + b
 The forward pass computes the affine transformation, while the backward pass derives gradients with respect to the weights, biases, and inputs using the multivariable chain rule:
 
 Backward:
+
 dL/dW = Xᵀδ
+
 dL/db = Σδ
+
 dL/dX = δWᵀ
+
 
 Weights are initialized with **He initialization** (\(\sqrt{2/n_{in}}\)) for stable training with ReLU activations.
 
-![Description](arcitecture_stuff/dense.jpg)
+<img src="arcitecture_stuff/dense.jpg" alt="Dense Layer" width="700">
