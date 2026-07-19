@@ -22,7 +22,7 @@ Weights are initialized with **He initialization** np.sqrt(2 / n_input) for stab
 
 <img src="dense.jpg" width="700">
 
-Categorical cross entropy 
+CATEGORICAL CROSS ENTROPY
 
 if ndim == 2 --> one hot encoded 
 
@@ -85,5 +85,5 @@ output = np.array(
                   [-0.00361701]])
 
 
-                  
+self.output = -np.log(output)   # -log and use np.clip prevent overflow          
                
