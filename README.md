@@ -20,5 +20,5 @@ dL/dX = δWᵀ
 
 Weights are initialized with **He initialization** np.sqrt(2 / n_input) for stable training with ReLU activations.
 
-<img src="img/dense.jpg" width="700">
-<img src="img/dense.jpg" width="700">
+<img src="Deep-Learning-From-Scratch-MRI-Scan-Analysis/img/dense.jpg" width="700">
+<img src="Deep-Learning-From-Scratch-MRI-Scan-Analysis/img/dense.jpg" width="700">
