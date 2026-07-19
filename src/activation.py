@@ -1,3 +1,5 @@
+import numpy as np
+
 #Relu activation 
 class Relu():
   
