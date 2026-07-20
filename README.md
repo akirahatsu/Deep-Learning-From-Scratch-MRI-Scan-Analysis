@@ -86,4 +86,24 @@ output = np.array(
 
 
 self.output = -np.log(output)   # -log and use np.clip prevent overflow          
+
                
+## Softmax_loss_Categoricalcrossentropy backpropogation 
+
+<img src="soft.jpg" width="700">
+
+Computing the Softmax and Cross-Entropy derivatives separately requires differentiating the Softmax function, which produces a full **Jacobian matrix**. Applying the chain rule through this Jacobian is computationally unnecessary.
+
+By combining the two operations, many terms cancel during differentiation—particularly the logarithm from the Cross-Entropy loss and the exponential terms from Softmax. The gradient simplifies to a compact expression:
+
+[
+\frac{\partial L}{\partial z} = \frac{\text{softmax}(z) - y}{N}
+]
+
+where:
+
+* (z) are the logits (inputs to Softmax),
+* (y) is the one-hot encoded ground truth,
+* (N) is the batch size when the mean loss is used.
+
+This avoids explicitly constructing the Softmax Jacobian, reduces computation, and is the standard implementation used in modern deep learning frameworks.
