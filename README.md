@@ -96,11 +96,7 @@ Computing the Softmax and Cross-Entropy derivatives separately requires differen
 
 By combining the two operations, many terms cancel during differentiation—particularly the logarithm from the Cross-Entropy loss and the exponential terms from Softmax. The gradient simplifies to a compact expression:
 
-$$
-\frac{\partial L}{\partial z}
-=
-\frac{\operatorname{softmax}(z)-y}{N}
-$$
+$\frac{\partial L}{\partial z}=\frac{\operatorname{softmax}(z)-y}{N}$
 
 where:
 
