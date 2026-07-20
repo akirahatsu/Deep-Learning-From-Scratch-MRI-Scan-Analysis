@@ -1,3 +1,5 @@
+import numpy as np
+
 class CatergoricalCrossEntropy():
 
   #Forward
@@ -18,6 +20,8 @@ class CatergoricalCrossEntropy():
           ].reshape(-1,1)  
        
     encode = np.clip(encode , 1e-7 , 1-1e-7) # to avoid 0 , log(0) == inf
-    self.output = -np.log(encode)
+    
+    #Negative log and for mean loss
+    self.output = np.sum(-np.log(encode))/len(encode)
 
     return self.output
