@@ -44,6 +44,6 @@ class Softmax_Loss_crossentropy():
     soft_output[range(sample),self.y_true] -= 1 # softmax - groud_true
     
     # Loss with respect last layer output 
-    dl_dz = soft_output / sample # mean derivative == 1/N
+    self.dl_dz = soft_output / sample # mean derivative == 1/N
 
-    return dl_dz
+    return self.dl_dz
