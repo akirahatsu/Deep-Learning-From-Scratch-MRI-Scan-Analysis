@@ -1,4 +1,8 @@
 import numpy as np
+from activation import Softmax
+from CategoricalCrossEntropyLoss import CatergoricalCrossEntropy
+
+
 
 """
 Combining Softmax and Cross-Entropy allows us to compute the gradient
@@ -18,14 +22,14 @@ class Softmax_Loss_crossentropy():
   # We initialise softmax and cross entropy tha we made before 
 
   def __init__(self, softmax , crossentropyloss):
-    self.softmax = softmax
-    self.crossentropyloss = crossentropyloss
+    self.softmax = Softmax()
+    self.crossentropyloss = CatergoricalCrossEntropy()
 
   # Forward
   def forward(self , input , y_true): 
 
-    self.softmax(input)
-    self.output = self.crossentropyloss(self.softmax.output ,y_true)
+    self.softmax.forward(input)
+    self.output = self.crossentropyloss.forward(self.softmax.output ,y_true)
     self.y_true = y_true
 
     return self.output
