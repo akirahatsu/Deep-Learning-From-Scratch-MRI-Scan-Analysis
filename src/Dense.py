@@ -31,3 +31,6 @@ class Dense():
     self.dl_db = np.sum(dl_da, axis=0, keepdims=True) # y=mx+b --> dy/db = 1 | dl/db = dl/da * 1 
     #gradient with respect to input
     self.dl_di = dl_da @ self.weight.T 
+
+
+    retrun self.dl_di
