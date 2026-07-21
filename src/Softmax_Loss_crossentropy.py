@@ -21,7 +21,7 @@ class Softmax_Loss_crossentropy():
 
   # We initialise softmax and cross entropy tha we made before 
 
-  def __init__(self, softmax , crossentropyloss):
+  def __init__(self):
     self.softmax = Softmax()
     self.crossentropyloss = CatergoricalCrossEntropy()
 
