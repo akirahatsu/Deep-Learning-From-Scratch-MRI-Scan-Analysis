@@ -3,7 +3,7 @@ Research-oriented implementation of neural networks from first principles, demon
 
 ## About Data
 
-#Brain Tumor MRI Dataset
+##Brain Tumor MRI Dataset
 
 <img src="data_sample.png" width="700">
 
