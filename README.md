@@ -3,7 +3,11 @@ Research-oriented implementation of neural networks from first principles, demon
 
 ## About Data
 
+
+
 ## Brain Tumor MRI Dataset
+
+
 
 <img src="data_sample.png" width="700">
 
@@ -46,7 +50,16 @@ Weights are initialized with **He initialization** np.sqrt(2 / n_input) for stab
 
 <img src="dense.jpg" width="700">
 
+
+
+
+
+
+
 ## CATEGORICAL CROSS ENTROPY
+
+
+
 
 if ndim == 2 --> one hot encoded 
 
@@ -111,8 +124,15 @@ output = np.array(
 
 self.output = -np.log(output)   # -log and use np.clip prevent overflow          
 
+
+
+
                
 ## Softmax_loss_Categoricalcrossentropy backpropogation 
+
+
+
+
 
 <img src="soft.jpg" width="700">
 
