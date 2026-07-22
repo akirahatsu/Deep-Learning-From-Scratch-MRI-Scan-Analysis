@@ -1,6 +1,28 @@
 # Deep-Learning-From-Scratch-MRI-Scan-Analysis
 Research-oriented implementation of neural networks from first principles, demonstrating mathematical foundations and medical image classification.
 
+## About Data
+
+#Brain Tumor MRI Dataset
+
+<img src="data_sample.png" width="700">
+
+classes 
+
+              Training/
+    glioma/        (1400 images)
+    meningioma/    (1400 images)
+    pituitary/     (1400 images)
+    notumor/       (1400 images)
+
+              Testing/
+    glioma/        (400 images)
+    meningioma/    (400 images)
+    pituitary/     (400 images)
+    notumor/       (400 images)
+
+                
+
 ## Dense Layer
 
 Implements a fully connected (dense) layer using matrix multiplication:
