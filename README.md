@@ -22,6 +22,8 @@ classes
     notumor/       (400 images)
 
                 
+## Structure
+
 
 ## Dense Layer
 
