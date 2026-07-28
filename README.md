@@ -65,7 +65,7 @@ so when we use dense layer every pixel starts with different random weights, so 
  Also another reson object movement cnn can deal with if efficeintly For example, if an eye moves two pixels to the left, it's still an eye
 
 
-Output size
+### Output size
 
                 outputsize = (inputsize - kernelsize) + 1          
 ### Sample 
@@ -101,6 +101,49 @@ reson is in optimisation we will save all contributution of weights
 and optimise w1
 
 
+
+### With respect input 
+
+            dl_di[
+                b ,
+                el : el + kernel.shape[1] ,
+                i :i + kernel.shape[2]
+                ] += kernel[k] * dvolue[b, k, el, i] 
+
+              print(f"\nnumeber {i} \n" ,dl_di)
+
+### Output shaws how out empty cells are filling 
+
+               numeber 0 
+               [[[-13.9843998  -11.18751984   0.           0.        ]
+               [-13.9843998   -2.79687996   0.           0.        ]
+               [  0.           0.           0.           0.        ]
+               [  0.           0.           0.           0.        ]]]
+
+               numeber 1 
+               [[[-13.9843998  -30.55912989 -15.49728804   0.        ]
+               [-13.9843998  -22.16849001  -3.87432201   0.        ]
+               [  0.           0.           0.           0.        ]
+               [  0.           0.           0.           0.        ]]]
+
+               numeber 2 
+               [[[-13.9843998  -30.55912989 -41.33457939 -20.66983308]
+               [-13.9843998  -22.16849001 -29.71161336  -5.16745827]
+               [  0.           0.           0.           0.        ]
+               [  0.           0.           0.           0.        ]]]
+
+               .
+               .
+               .
+
+               numeber :-1 
+              [[[-13.9843998  -30.55912989 -41.33457939 -20.66983308]
+              [-44.25278325 -61.07188502 -48.65722201 -10.92318471]
+              [-87.91467755 -83.61432127 -30.76097844  -7.21864833]
+              [-57.6462941  -28.28417987 -10.57563011  -1.44492918]]]
+
+
+              
 ## CATEGORICAL CROSS ENTROPY
 
 
