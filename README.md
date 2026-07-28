@@ -64,8 +64,41 @@ so when we use dense layer every pixel starts with different random weights, so 
  We are making an overall assumption about the image with a few number of weights
  Also another reson object movement cnn can deal with if efficeintly For example, if an eye moves two pixels to the left, it's still an eye
 
- 
 
+Output size
+
+                outputsize = (inputsize - kernelsize) + 1          
+### Sample 
+
+       input =   np.array(array([[[4, 2, 8, 2],
+                                  [6, 9, 9, 9],
+                                  [8, 8, 9, 4],
+                                  [7, 3, 3, 9]]]),
+         
+        kernel = np.array([[[9, 5],
+                            [2, 3]]]))
+        patch_1 = [4,4, 
+                   6,9]
+
+        first_patch_calc = (9 * 4) + (5 * 2) + (6 * 2) + (9 * 3)
+       
+        
+### Result forward 
+
+        self.output = np.array([[[[ 1.10188775, -6.8881995 ,  9.80237992],
+                                  [-0.67406507,  3.77661011,  8.35969156],
+                                  [ 7.31238385,  4.02239299,  6.10366617]]]])
+
+                                  
+so when we do difrentiation with respect to weight that means
+in forward pass we deal with single patch y = w1*i11 + w2*i12 + w3*i13 + w4*iw14
+from partial derivative rule if we diffrentiate w1 with respect to y   we assume
+other stuff as constant f(x) = c --> f'(x) = 0 in diffretiation patch will left with
+single weight that we are diffrentiating with respect to
+
+so we add all patch outputs literally means df/dw1 from all patch
+reson is in optimisation we will save all contributution of weights
+and optimise w1
 
 
 ## CATEGORICAL CROSS ENTROPY
