@@ -51,9 +51,9 @@ Weights are initialized with **He initialization** np.sqrt(2 / n_input) for stab
 <img src="dense.jpg" width="700">
 
 
-#CNN Convolutional Neural Network 
+# CNN Convolutional Neural Network 
 
-##MAIN QUESTION WHY WE NEED IT AT ALL 
+## MAIN QUESTION WHY WE NEED IT AT ALL 
 so when we use dense layer every pixel starts with different random weights, so even similar pixels are initially treated differently
 
              np.random.randn(x,y)
