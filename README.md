@@ -51,8 +51,20 @@ Weights are initialized with **He initialization** np.sqrt(2 / n_input) for stab
 <img src="dense.jpg" width="700">
 
 
+## CNN Convolutional Neural Network 
 
+# MAIN QUESTION WHY WE NEED IT AT ALL 
+so when we use dense layer every pixel starts with different random weights, so even similar pixels are initially treated differently
 
+             np.random.randn(x,y)
+             
+ so what if it starts radnomy issue is next step is relu and we might loose correlation -- Every location gets its own opinion 
+ Image is something differnt for example a man in red shirt that mean his cloth color has same or similar color sharing 
+ and with cnn we can make assumtion more easier way -- cnn says I'll use one opinion everywhere unless the data tells me otherwise
+ We are making an overall assumption about the image with a few number of weights
+ Also another reson object movement cnn can deal with if efficeintly For example, if an eye moves two pixels to the left, it's still an eye
+
+ 
 
 
 
