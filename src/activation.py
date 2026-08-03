@@ -28,7 +28,7 @@ class Softmax():
   #Forward 
   def forward(self, input):
 
-    norm_input = input - np.max(input, axis = 1, keepdims=1 ) # shifing if input[n] huge  log will make overflow  input = [[1000, 999, 998]]
+    norm_input = input - np.max(input, axis = 1, keepdims=1 ) # shifing if input[n] huge  e^x will make overflow  input = [[1000, 999, 998]]
     
     exp = np.exp(norm_input) 
     
