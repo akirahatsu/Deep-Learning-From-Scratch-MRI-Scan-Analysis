@@ -1,3 +1,5 @@
+import numpy as np
+
 class CNN:
 
   def __init__(self ,kernel_shape = (2,2) , n_kernel = 1):
@@ -79,4 +81,4 @@ class CNN:
                     h : h + self.kernel.shape[2],
                     w : w + self.kernel.shape[3]] += self.kernel[k,c] * dl_dc[b,k,h,w]
 
-    return self.dl_di
+    return self.dl_dw , self.dl_db , self.dl_di
