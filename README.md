@@ -243,3 +243,13 @@ where:
 * (N) is the batch size when the mean loss is used.
 
 This avoids explicitly constructing the Softmax Jacobian, reduces computation, and is the standard implementation used in modern deep learning frameworks.
+
+
+SOOO i become quite disseponted coz nobody on earth will ever watch this repo 
+Any way 
+
+i have to meintion some key things where is imortant
+never ever use image file as it is but normolise
+second use He init coz cnn will mostly mess up if u use constant for weight normolisation
+i will write more stuff when i remember .... for myself hehe
+for now bye
