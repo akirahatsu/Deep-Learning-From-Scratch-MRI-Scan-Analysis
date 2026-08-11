@@ -16,13 +16,16 @@ class CNN:
 
 
     self.batch ,self.channel , self.height , self.width = self.input.shape
-
-    if not hasattr(self, "kernel"):
-      self.kernel = np.random.randn(
+    
+#He init useage update
+    n_in = self.channel * self.kernel_shape[0] * self.kernel_shape[1]   
+    if not hasattr(self, "weight"):
+      self.weight = (np.random.randn(
           self.n_kernel,
           self.channel,
           *self.kernel_shape
-      )
+      ) *  np.sqrt(2 / n_in))
+
 
 
 
