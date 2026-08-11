@@ -13,7 +13,7 @@ class Flatten:
 
   def backward(self, dl_df):
 
-    dl_dp = dl_df.reshape(self.input.shape)
+    self.dl_dp = dl_df.reshape(self.input.shape)
 
-    return dl_dp  
+    return self.dl_dp  
 
